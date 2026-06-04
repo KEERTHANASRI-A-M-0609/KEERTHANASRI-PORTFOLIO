@@ -1,12 +1,5 @@
 [build]
 command = "npm run build"
-functions = "dist/server"
-publish = "dist/client"
+publish = "dist"
 
-[[redirects]]
-from = "/*"
-to = "/.netlify/functions/server"
-status = 200
-
-[context.production.environment]
-NODE_ENV = "production"
+# The output directory is dist which contains both server and client
